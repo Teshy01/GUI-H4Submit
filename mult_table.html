@@ -1,0 +1,75 @@
+<!--
+Name: Hritesh Rajanagan
+Contact Information: hritesh_rajanagan@student.uml.edu
+-->
+
+<!-- HTML file for Mult table-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Interactive Multiplication Table</title>
+
+        <!-- Linking CSS, Bootstrap and Javascript to HTML file -->
+        <link rel="stylesheet" href="./CSS/mult_style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.js"></script>
+        <link href=" https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./Javascript/mult_func.js"></script>
+    </head>
+
+    <!-- Body starts here -->
+    <body>
+        <!-- Jumbotron for Title Display! -->
+        <div class="jumbotron">
+            <h1>Interactive Multiplication Table</h1> <!-- Title -->
+        </div>
+
+        <!-- Prints out error message here (using javascript) -->
+        <p id="error"></p>
+
+        <!-- div to hold all form related items (this gets CSSd) -->
+        <div class="container">
+            <!-- Form created here -->
+            <form id="table" name="table">
+                <!-- each input is placed into its own div -->
+                <div class="col-sm-12" id="form1">
+                    <!-- input formatted to have text then bar to fill -->
+                    Minimum Row Value: <br> <input id="minRow" value="0" type="text" name="minRow"> 
+                    <div id="slider1"></div>               
+                </div>
+                <div class="col-sm-12" id="form2">
+                    Maximum Row Value: <br> <input id="maxRow" value="0" type="text" name="maxRow">
+                    <div id="slider2"></div>               
+                </div>
+                <div class="col-sm-12" id="form3">                    
+                    Minimum Column Value: <br> <input id="minCol" value="0" type="text" name="minCol">
+                    <div id="slider3"></div>               
+                </div>
+                <div class="col-sm-12" id="form4">
+                    Maximum Column Value: <br> <input id="maxCol" value="0" type="text" name="maxCol">
+                    <div id="slider4"></div>               
+                </div>  
+                <div class="button">
+                    <input type="submit" value="Submit" onclick="multTableTab()">
+                </div>
+            </form>
+        </div>
+
+        <!-- placeholder for table (prints table here) -->
+        <div id ="placeholder">
+
+        </div>
+        <input type="submit" value="Clear All Tabs" onclick="destroyTabs()">
+        <div id="tabs">
+            <ul>
+
+            </ul>
+            
+        </div>
+    </body>
+</html>
